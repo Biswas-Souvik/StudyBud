@@ -9,9 +9,9 @@
 
 <div></div>
     <ul>
-        {% for room in topics %}
+        {% for r in topics %}
         <li>
-            {{room.id}} -- <a href="/room/{{room.id}}/">{{room.name}}</a>
+            {{r.id}} -- <a href="{% url 'topic' r.id %}">{{r.name}}</a>
         </li>
         {% endfor %}
     </ul>
