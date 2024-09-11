@@ -11,7 +11,7 @@
     <ul>
         {% for room in topics %}
         <li>
-            {{room.id}} -- {{room.name}}
+            {{room.id}} -- <a href="/room/{{room.id}}/">{{room.name}}</a>
         </li>
         {% endfor %}
     </ul>

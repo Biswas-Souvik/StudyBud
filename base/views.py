@@ -8,7 +8,16 @@ rooms = [
 
 # Create your views here.
 def home(request):
+    
     return render(request, 'base/home.html', {'topics': rooms})
 
-def room(request):
-    return render(request, 'base/room.html')
+
+def room(request, id):
+
+    topic = None
+    for room in rooms:
+        if room['id'] == id:
+            topic = room
+            break
+
+    return render(request, 'base/room.html', topic)
