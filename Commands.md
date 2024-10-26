@@ -1,13 +1,13 @@
 # Frequently Used Commands
 
-1. pipenv shell : activate the virtual env
-2. pipenv --venv : check the virutal env location and name
+1.1. pipenv shell : activate the virtual env
+1.2. pipenv --venv : check the virutal env location and name
 
-3. django-admin startproject <project name>: create a django project
+2.1. django-admin startproject <project name>: create a django project
 
-4. Python manage.py runserver : run the localhost
-5. python manage.py startapp <app name>: create app
-6. python manage.py createsuperuser : create a admin user
-7. python manage.py makemigrations: add the updated models to the staged area
-8. python manage.py migrate: update the staged models
+3.1. Python manage.py runserver : run the localhost
+3.2. python manage.py startapp <app name>: create app
+3.3. python manage.py createsuperuser : create a admin user
+3.4. python manage.py makemigrations: add the updated models to the staged area
+3.5. python manage.py migrate: update the staged models
  
