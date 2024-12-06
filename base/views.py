@@ -29,7 +29,8 @@ def loginPage(request):
 
         if user is not None:
             login(request, user)
-            return redirect('home')
+            next_url = request.POST.get('next', '/')  # Use POST because forms are involved
+            return redirect(next_url)
         else:
             messages.error(request, 'Password is incorrect')
 

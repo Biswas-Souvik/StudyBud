@@ -16,6 +16,9 @@
   
         <form class="form" action="" method="POST">
           {% csrf_token %}
+          {% if request.GET.next %}
+            <input type="hidden" name="next" value="{{ request.GET.next }}">
+          {% endif %}
           <div class="form__group form__group">
             <label for="room_name">Username</label>
             <input id="username" name="username" type="text" placeholder="e.g. dennis_ivy" />
