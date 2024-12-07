@@ -162,7 +162,7 @@ def updateRoom(request, pk):
         room.name = request.POST.get('name')
         room.description = request.POST.get('description')
         room.save()
-        return redirect('home')
+        return redirect('room', id=room.id)
         
     context = {'form': form, 'topics': topics, 'room': room}
     return render(request, 'base/room_form.html', context)
