@@ -36,7 +36,7 @@
             </div>
         {% else %}
             <!-- Not Logged In -->
-            <a href="{% url 'login' %}"> 
+            <a href="{% url 'login' %}{% if request.path != '/' %}?next={{ request.path }}{% endif %}"> 
                 <img src="{% static 'images/avatar.svg' %}" />
                 <p>Login</p>
             </a>

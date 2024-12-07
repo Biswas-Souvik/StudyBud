@@ -21,7 +21,7 @@
           {% endif %}
           <div class="form__group form__group">
             <label for="room_name">Username</label>
-            <input id="username" name="username" type="text" placeholder="e.g. dennis_ivy" />
+            <input id="username" name="username" type="text" placeholder="e.g. souvik_biswas" />
           </div>
           <div class="form__group">
             <label for="password">Password</label>
@@ -46,7 +46,7 @@
   
         <div class="auth__action">
           <p>Haven't signed up yet?</p>
-          <a href="{% url 'register' %}" class="btn btn--link">Sign Up</a>
+          <a href="{% url 'register' %}{% if request.GET.next %}?next={{ request.GET.next }}{% endif %}" class="btn btn--link">Sign Up</a>
         </div>
       </div>
     </div>
@@ -94,7 +94,7 @@
   
         <div class="auth__action">
           <p>Already signed up??</p>
-          <a href="{% url 'login' %}" class="btn btn--link">Login</a>
+          <a href="{% url 'login' %}{% if request.GET.next %}?next={{ request.GET.next }}{% endif %}" class="btn btn--link">Login</a>
         </div>
       </div>
     </div>

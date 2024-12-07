@@ -113,7 +113,7 @@
           </form>
         {% else %}
           <div class="room__message--login-box">
-            <a href="{% url 'login' %}" class="login-link">Login</a> to post a message.
+            <a href="{% url 'login' %}?next={{ request.path }}" class="login-link">Login</a> to post a message.
           </div>
         {% endif %}
       </div>
@@ -140,5 +140,4 @@
     <!--  End -->
   </div>
 </main>
-<script src="script.js"></script>
 {% endblock content %}
