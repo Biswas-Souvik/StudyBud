@@ -67,7 +67,12 @@
 
           {% for field in form %}
           <div class="form__group form__group">
-            <label for="room_name">{{field.label}}</label>
+            <label for="{{ field.id_for_label }}">
+              {{field.label}}
+              {% if field.field.required or 'Password' in field.label %}
+                <span class="required">*</span>
+              {% endif %}
+            </label>
             {{field}}
           </div>
           {% endfor %}
